@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Developer Toolbox</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <h1>Developer Toolbox</h1>
+  <button id="themeBtn">🌙 Dark</button>
+</header>
+
+<section class="hero">
+  <h2>All Useful Developer Tools in One Place</h2>
+  <p>Password generator, QR generator, JSON formatter, notes, calculator and more.</p>
+</section>
+
+<main class="tools">
+
+  <div class="card">
+    <h3>Password Generator</h3>
+    <input type="number" id="passLength" placeholder="Length" value="12">
+    <button onclick="generatePassword()">Generate</button>
+    <p id="passwordOutput"></p>
+  </div>
+
+  <div class="card">
+    <h3>QR Code Generator</h3>
+    <input type="text" id="qrText" placeholder="Enter text or link">
+    <button onclick="generateQR()">Generate QR</button>
+    <div id="qrBox"></div>
+  </div>
+
+  <div class="card">
+    <h3>JSON Formatter</h3>
+    <textarea id="jsonInput" placeholder='{"name":"Soorya"}'></textarea>
+    <button onclick="formatJSON()">Format JSON</button>
+    <pre id="jsonOutput"></pre>
+  </div>
+
+  <div class="card">
+    <h3>Text Case Converter</h3>
+    <textarea id="caseInput" placeholder="Enter text"></textarea>
+    <button onclick="upperCase()">UPPERCASE</button>
+    <button onclick="lowerCase()">lowercase</button>
+    <button onclick="capitalizeText()">Capitalize</button>
+    <p id="caseOutput"></p>
+  </div>
+
+  <div class="card">
+    <h3>Word Counter</h3>
+    <textarea id="wordInput" placeholder="Type something"></textarea>
+    <button onclick="countWords()">Count</button>
+    <p id="wordOutput"></p>
+  </div>
+
+  <div class="card">
+    <h3>Color Generator</h3>
+    <button onclick="generateColor()">Generate Color</button>
+    <div id="colorBox"></div>
+    <p id="colorCode"></p>
+  </div>
+
+  <div class="card">
+    <h3>Gradient Generator</h3>
+    <button onclick="generateGradient()">Generate Gradient</button>
+    <div id="gradientBox"></div>
+    <p id="gradientCode"></p>
+  </div>
+
+  <div class="card">
+    <h3>Base64 Encoder / Decoder</h3>
+    <textarea id="baseInput" placeholder="Enter text"></textarea>
+    <button onclick="encodeBase64()">Encode</button>
+    <button onclick="decodeBase64()">Decode</button>
+    <p id="baseOutput"></p>
+  </div>
+
+  <div class="card">
+    <h3>Unit Converter</h3>
+    <input type="number" id="kmInput" placeholder="Kilometers">
+    <button onclick="convertKm()">Convert to Miles</button>
+    <p id="kmOutput"></p>
+  </div>
+
+  <div class="card">
+    <h3>Calculator</h3>
+    <input type="text" id="calcInput" placeholder="Example: 10+5*2">
+    <button onclick="calculate()">Calculate</button>
+    <p id="calcOutput"></p>
+  </div>
+
+  <div class="card">
+    <h3>Digital Clock</h3>
+    <h2 id="clock"></h2>
+  </div>
+
+  <div class="card">
+    <h3>Stopwatch</h3>
+    <h2 id="stopwatch">00:00:00</h2>
+    <button onclick="startStopwatch()">Start</button>
+    <button onclick="stopStopwatch()">Stop</button>
+    <button onclick="resetStopwatch()">Reset</button>
+  </div>
+
+  <div class="card">
+    <h3>Notes App</h3>
+    <textarea id="noteInput" placeholder="Write your note"></textarea>
+    <button onclick="saveNote()">Save Note</button>
+    <button onclick="clearNote()">Clear</button>
+    <p id="savedNote"></p>
+  </div>
+
+</main>
+
+<footer>
+  <p>Made by Soorya S Rajesh</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
